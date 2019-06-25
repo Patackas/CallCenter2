@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * Client entity.
@@ -17,12 +18,14 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Version
-    private Integer version;
+//    @Version
+//    private Integer version;
 
-    private String clientId;
+
+    private String clientLastName;
     private String name;
-    private BigDecimal price;
+    private String phone;
+    private Date birth;
 
     public String getName() {
         return name;
@@ -32,13 +35,13 @@ public class Client {
         this.name = name;
     }
 
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
+//    public Integer getVersion() {
+//        return version;
+//    }
+//
+//    public void setVersion(Integer version) {
+//        this.version = version;
+//    }
 
     public Integer getId() {
         return id;
@@ -48,20 +51,43 @@ public class Client {
         this.id = id;
     }
 
-    public String getClientId() {
-        return clientId;
+//    public String getClientId() {
+//        return clientId;
+//    }
+//
+//    public void setClientId(String productId) {
+//        this.clientId = clientId;
+//    }
+//
+//    public BigDecimal getPrice() {
+//        return price;
+//    }
+//
+//    public void setPrice(BigDecimal price) {
+//        this.price = price;
+//    }
+
+    public String getClientLastName() {
+        return clientLastName;
     }
 
-    public void setClientId(String productId) {
-        this.clientId = clientId;
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
 }
