@@ -5,9 +5,7 @@ import com.ensat.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Client service implement.
- */
+
 @Service
 public class ClientServiceImpl implements ClientService {
 

@@ -31,6 +31,7 @@
                 <td th:text="${client.clientLastName}">Last Name</td>
                 <td th:text="${client.name}">Name</td>
                 <td th:text="${client.phone}">Phone</td>
+<!--                <td th:text="${client.birth}">Date of birth</td>-->
                 <td><a th:href="${ '/client/' + client.id}">View</a></td>
                 <td><a th:href="${'/client/edit/' + client.id}">Edit</a></td>
                 <td><a th:href="${'/client/delete/' + client.id}">Delete</a></td>

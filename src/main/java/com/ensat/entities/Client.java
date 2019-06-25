@@ -1,16 +1,10 @@
 package com.ensat.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * Client entity.
- */
+
 @Entity
 public class Client {
 
@@ -18,13 +12,17 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-//    @Version
-//    private Integer version;
 
+
+
+    @Column(unique = true)
 
     private String clientLastName;
+    @Column(unique = false)
     private String name;
+    @Column(unique = false)
     private String phone;
+    @Column(unique = true)
     private Date birth;
 
     public String getName() {
